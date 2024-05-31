@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="availability_options">
+        <item>Available | Hey Let Us Connect</item>
+        <item>Busy | Cannot Connect Now</item>
+        <item>Away | Will Be Back Later</item>
+        <!-- Add more items as needed -->
+    </string-array>
+</resources>

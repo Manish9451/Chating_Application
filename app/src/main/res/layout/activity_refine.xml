@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RefineActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/material_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#3B4477"
+            app:title="Refine" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Select Your Availability"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:entries="@array/availability_options" />
+
+        <!-- Status input field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:text="Add Your Status"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerAvailability"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:hint="Hi community! I am open to new connection😊" />
+
+        <!-- Slider for distance -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="150dp"
+            android:text="Select Hyper local Distance"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBarDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextStatus"
+            android:layout_marginTop="60dp"
+            android:max="100"
+            android:progress="61" />
+
+        <!-- Purpose buttons -->
+        <LinearLayout
+            android:id="@+id/linearLayoutPurpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekBarDistance"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonCoffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#090909"
+                android:backgroundTint="#ffffff"
+                android:text="Coffee" />
+
+            <Button
+                android:id="@+id/buttonbusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#090909"
+                android:backgroundTint="#ffffff"
+                android:text="Business" />
+
+            <Button
+                android:id="@+id/buttonhobbies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#090909"
+                android:backgroundTint="#ffffff"
+                android:layout_marginTop="10dp"
+                android:text="Hobbies" />
+
+
+            <!-- Add more buttons similarly -->
+
+        </LinearLayout>
+
+        <!-- Save and Explore button -->
+        <LinearLayout
+            android:id="@+id/linearLayoutPurpose2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutPurpose"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/buttonfriendship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#090909"
+                android:backgroundTint="#ffffff"
+                android:text="Friendship" />
+
+            <Button
+                android:id="@+id/buttonmovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#090909"
+                android:backgroundTint="#ffffff"
+                android:text="Movies" />
+
+            <Button
+                android:id="@+id/buttondinning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#090909"
+                android:backgroundTint="#ffffff"
+                android:text="Dinning" />
+
+            <!-- Add more buttons similarly -->
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSaveExplore"
+            android:layout_width="201dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutPurpose2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="91dp"
+            android:text="Save  Explore" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

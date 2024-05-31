@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactsFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#101530"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/contactPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Personal" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/contactService"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Services" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/contactBusinesses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Businesses" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.search.SearchBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
